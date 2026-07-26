@@ -1,0 +1,40 @@
+:root {
+    /* Brand & Primary Colors */
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+    --primary-light: #eff6ff;
+
+    /* Neutral Spectrum */
+    --bg-main: #f8fafc;
+    --bg-surface: #ffffff;
+    --border: #e2e8f0;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+
+    /* Employee Status Colors */
+    --status-active-bg: #dcfce7;
+    --status-active-text: #15803d;
+
+    --status-pending-bg: #fef9c3;
+    --status-pending-text: #a16207;
+
+    --status-inactive-bg: #fee2e2;
+    --status-inactive-text: #b91c1c;
+
+    /* Feedback & CRUD Actions */
+    --danger: #ef4444;
+    --danger-hover: #dc2626;
+    --warning: #f59e0b;
+    --success: #10b981;
+
+    /* Layout, Shadows & Radius */
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+
+    /* Transitions */
+    --transition: all 0.2s ease-in-out;
+}
