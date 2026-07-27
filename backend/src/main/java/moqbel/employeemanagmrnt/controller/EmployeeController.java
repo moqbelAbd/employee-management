@@ -2,11 +2,9 @@ package moqbel.employeemanagmrnt.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import moqbel.employeemanagmrnt.dto.GetEmployeesResponse;
+import moqbel.employeemanagmrnt.dto.AddEmployeeRequest;
 import moqbel.employeemanagmrnt.service.EmployeeService;
 
 import java.util.List;
@@ -23,4 +21,13 @@ public class EmployeeController {
     public ResponseEntity <List<GetEmployeesResponse>> getEmployees() {
         return ResponseEntity.ok(employeeService.getEmployees());
     }
+
+    @PostMapping("add-employee")
+    public  ResponseEntity <String> addEmployees
+            (@RequestBody AddEmployeeRequest addEmployeeRequest) {
+        employeeService.addEmployees(addEmployeeRequest);
+        return ResponseEntity.ok("Added successfully");
+    }
+
+
 }

@@ -2,6 +2,7 @@ package moqbel.employeemanagmrnt.service;
 
 import lombok.RequiredArgsConstructor;
 import moqbel.employeemanagmrnt.dto.GetEmployeesResponse;
+import moqbel.employeemanagmrnt.dto.AddEmployeeRequest;
 import moqbel.employeemanagmrnt.model.Employee;
 import moqbel.employeemanagmrnt.repository.EmployeeRepository;
 import org.springframework.stereotype.Service;
@@ -28,8 +29,21 @@ public class EmployeeService {
                 emp.getLastName(),
                 emp.getEmail()
         );
+    }
 
+    @Transactional
+    public void addEmployees( AddEmployeeRequest request) {
+
+        Employee newEmployee = Employee.builder()
+                .firstName(request.firstName())
+                .lastName(request.lastName())
+                .email(request.email())
+                .password("defaultPassword123")
+                .build();
+
+        employeeRepository.saveAndFlush(newEmployee);
 
     }
 
-}
+    }
+

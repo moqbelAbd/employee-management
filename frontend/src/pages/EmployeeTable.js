@@ -1,6 +1,8 @@
 import "./EmployeeTable.css";
 
 function EmployeeTable({ employees }) {
+
+
     return (
         <div className="container">
             <table className="table-container">
